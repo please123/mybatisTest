@@ -14,5 +14,9 @@
     	WHERE country = #{country}
     </if>
   </select>
+  
+  <insert id="insertUser">
+  	INSERT INTO lab03 (seq, name, country) VALUES(#{seq}, #{"name"}, #{"country"})
+  </insert>
 
 </mapper>
