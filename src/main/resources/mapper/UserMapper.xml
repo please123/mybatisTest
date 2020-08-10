@@ -6,9 +6,9 @@
 <mapper namespace="com.example.demo.dao.UserDAO"><!--namespace를 통해 UserDAO와 연결합니다. -->
   		
   <select id="selectUsers" parameterType="com.example.demo.domain.User"
-	resultType="com.example.demo.domainca.User"><!-- selectUsers()메서드를 호출하면 실행할 SELECT문이며, 
+	resultType="com.example.demo.domain.User"><!-- selectUsers()메서드를 호출하면 실행할 SELECT문이며, 
 						UserDTO 객체를 파라미터로 받아, UserDTO객체를 반환합니다.-->
-  	SELECT `seq`, `name`, `country`
+  	SELECT seq, name, country
     FROM lab03
     <if test='country != null and country != ""'><!-- 만약 파라미터에 country가 있다면 SQL문에 WHERE절을 추가합니다. -->
     	WHERE country = #{country}
